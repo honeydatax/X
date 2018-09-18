@@ -24,7 +24,7 @@ int main(void) {
    s = DefaultScreen(d);
    w = XCreateSimpleWindow(d, RootWindow(d, s), 10, 10, 640, 240, 1,
                            0x1010FF, 0xFF8E00);
-   XSelectInput(d, w, ExposureMask | KeyPressMask);
+   XSelectInput(d, w, ExposureMask | KeyPressMask | ButtonPressMask);
    XMapWindow(d, w);
    
      Atom WM_DELETE_WINDOW = XInternAtom(d, "WM_DELETE_WINDOW", False); 
@@ -42,8 +42,9 @@ int main(void) {
 	  }
       
 	if (e.type == ButtonPress) {
-                   XButtonEvent* button_event=&e.xbutton;
-		   		if (button_event->x >=5 && button_event->y>=30 && button_event->x<=105 && button_event->y<=62){
+	
+                   
+		   		if (e.xbutton.button==1 && e.xbutton.x >=15 && e.xbutton.y>=30 && e.xbutton.x<=115 && e.xbutton.y<=62){
 					break;                 
 		} }
     if ((e.type == ClientMessage) && 
