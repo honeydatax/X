@@ -1,0 +1,1 @@
+g++ -o out gimage.cpp  `pkg-config gtk+-3.0 --cflags --libs`
