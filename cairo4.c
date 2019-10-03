@@ -1,5 +1,6 @@
 #include <cairo.h>
 #include <cairo-pdf.h>
+#include <cairo-svg.h>
 #include <gtk/gtk.h>
 #include <string.h>
 #include <stdlib.h>
@@ -14,7 +15,7 @@ void on_select();
 int main(int argc, char *argv[])
 {
 	
-		cairo_surface_t *surface = cairo_pdf_surface_create("draw.pdf",w, h );
+		cairo_surface_t *surface = cairo_svg_surface_create("2020.svg",w, h );
 		system("cal 2020 > calc.txt");
 		cr = cairo_create (surface);
 		cairo_set_source_rgb(cr,1.0,1.0,1.0);
