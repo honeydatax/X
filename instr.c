@@ -8,8 +8,8 @@ int instr(char *c,char *cc);
 
 int main(int argc, char *argv[])
 {
-	char *c1=&var1[0];
-	char *c2=&var2[0];
+	char *c1=var1;
+	char *c2=var2;
 	printf("%s\n",c1);
 	printf("find %s=%d\n",c2,instr(c1,c2));
 }

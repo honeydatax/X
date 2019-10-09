@@ -10,10 +10,10 @@ void strReplace(char *cccc,char *c,char *cc,char *ccc);
 
 int main(int argc, char *argv[])
 {
-	char *c0=&var0[0];
-	char *c1=&var1[0];
-	char *c2=&var2[0];
-	char *c3=&var3[0];
+	char *c0=var0;
+	char *c1=var1;
+	char *c2=var2;
+	char *c3=var3;
 	printf("%s\n",c1);
 	strReplace(c0,c1,c2,c3);
 	printf("%s\n",c0);

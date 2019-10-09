@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 {
 	int n=0;
 	int count=0;
-	char *c0=&var0[0];
-	char *c1=&var1[0];
-	char *c2=&var2[0];
+	char *c0=var0;
+	char *c1=var1;
+	char *c2=var2;
 	printf("\e[0;47;34m\n");
 	printf("%s\n",c1);
 	count=strsplint(c0,i,c1,';');
@@ -30,8 +30,8 @@ int strsplint(char *destiny,char *list[],char *src,char separete){
 	char *v2;
 	char *v3;
 	int count=1;
-	v1=&destiny[0];
-	v2=&src[0];
+	v1=destiny;
+	v2=src;
 	strcpy(v1,v2);
 	list[0]=v1;
 	do{
