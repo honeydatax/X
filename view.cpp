@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <gtk/gtk.h>
 
+ //g++ -o out view.cpp  `pkg-config gtk+-2.0 --cflags --libs`
+
 void tvprintf(char *s,int b,int tab);
 int strchr1(char *argv);
 void params(char *argv);
@@ -32,7 +34,7 @@ static void enter_callback()
   const gchar *entry_text;
   
   entry_text = gtk_entry_get_text (GTK_ENTRY (entry));
-  sprintf(argsvvv,"%s",entry_text);
+  sprintf(argsvvv,"(%s)",entry_text);
   strcpy(printft,"\n");
   errorss=-1;
   smain();
@@ -52,9 +54,9 @@ int main( int   argc,
 	argsvvv=&argsvv[0];
     gtk_init (&argc, &argv);
     
-    color1.red=65535;
-    color1.green=65535;
-    color1.blue=0;
+    color1.red=56000;
+    color1.green=56000;
+    color1.blue=56000;
 	sprintf(argsvvv,"%d",0);
     /* create a new window */
     window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
